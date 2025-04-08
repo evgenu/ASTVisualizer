@@ -1,0 +1,119 @@
+{
+    "Function": "main",
+    "Children": [
+      {
+        "Variable Declaration": "a",
+        "Assignment": {
+          "=": {
+            "Expression": {
+              "+": [
+                {
+                  "Expression": {
+                    "^": [
+                      { "Literal": 5 },
+                      {
+                        "Expression": {
+                          "^": [
+                            { "Literal": 2 },
+                            { "Literal": 3 }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                { "Literal": 10 }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "Variable Declaration": "b",
+        "Assignment": {
+          "=": {
+            "Expression": {
+              "+": [
+                { "Identifier": "a" },
+                {
+                  "Expression": {
+                    "*": [
+                      {
+                        "Expression": {
+                          "*": [
+                            { "Literal": 5 },
+                            {
+                              "Expression": {
+                                "-": [
+                                  { "Literal": 5 },
+                                  { "Literal": 10 }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      { "Literal": 5 }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      { "Variable Declaration": "d" },
+      {
+        "If Statement": {
+          "Condition": {
+            ">": [
+              { "Identifier": "a" },
+              { "Literal": 5 }
+            ]
+          },
+          "Body": [
+            {
+              "Assignment": {
+                "a": {
+                  "=": { "Literal": 5 }
+                }
+              }
+            },
+            {
+              "Variable Declaration": "c",
+              "Assignment": {
+                "=": { "Literal": 10 }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "While Statement": {
+          "Condition": {
+            "<": [
+              { "Identifier": "c" },
+              { "Literal": 15 }
+            ]
+          },
+          "Body": [
+            {
+              "Assignment": {
+                "c": {
+                  "=": {
+                    "Expression": {
+                      "+": [
+                        { "Identifier": "c" },
+                        { "Literal": 1 }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+  
