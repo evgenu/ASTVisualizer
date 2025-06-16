@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using AstVisualizerApp.Models;
+using Microsoft.Extensions.Logging;
 
 namespace AstVisualizerApp;
 
@@ -15,9 +16,9 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-#if DEBUG
+// #if DEBUG
 		builder.Logging.AddDebug();
-#endif
+// #endif
 
 		return builder.Build();
 	}
